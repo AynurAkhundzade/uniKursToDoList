@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      width: 600px;
+      position: relative;
+      border-radius: 20px;
+      gap: 3px;
+      display: flex;
+      flex-direction: column;
+      padding-right: 3%;
+      padding-left: 3%;
+      border: 0.5px solid gray;
+      margin: auto;
+    }
+    .container::before {
+      padding-top: 0;
+      border-radius: 20px 20px 0 0;
+      content: " ";
+      position: absolute;
+      background-color: yellow;
+      width: 100%;
+      height: 50px;
+      left: 0;
+    }
+    .container h1 {
+      padding-top: 4%;
+      font-size: 36px;
+      display: flex;
+      justify-content: center;
+    }
+    .container .sort {
+      width: 35px;
+      height: 25px;
+      display: flex;
+      align-self: flex-end;
+    }
+    .container .input {
+      border-radius: 16px;
+      height: 48px;
+    }
+    .container .delete {
+      width: 35px;
+      height: 35px;
+    }
+    .container .add {
+      width: 40%;
+      border-radius: 40px;
+      margin-left: 30%;
+      text-align: center;
+      background-image: url("../toDoListpr2/Group\ 33.png");
+      background-position: left;
+      background-repeat: no-repeat;
+      height: 42px;
+      border: 1px solid gray;
+      background-color: #833ae0;
+    }
+    .container .add img {
+      padding-left: 0;
+      margin: 0;
+    }
+    .butn {
+      background-image: url("../toDoListpr2/Group\ 56.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      border: 0;
+      border-radius: 20px;
+    }
+    .toDolist ul {
+      border: 1px solid gray;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .toDolist ul li {
+      display: flex;
+      justify-content: space-between;
+      margin-right: 8px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>To-Do List</h1>
+      <button class="sort" type="button">
+        <img src="../toDoListpr2/Group 34.png" alt="" />
+      </button>
+      <input type="text" class="input" />
+      <div class="toDolist"><ul></ul></div>
+      <button class="add" type="button">ADD</button>
+    </div>
+  </body>
+  <script src="jsproject.js"></script>
+</html>
